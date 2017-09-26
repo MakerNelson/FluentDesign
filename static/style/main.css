@@ -7,7 +7,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("../images/RollingHills.jpg");
+    background-image: url("../assets/images/RollingHills.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -45,7 +45,7 @@ a:visit{
     filter: blur(20px);
     /*background: rgba(255,255,255,0.5);*/
     margin: -30px;
-    background-image: url("../images/RollingHills.jpg");
+    background-image: url("../assets/images/RollingHills.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -55,7 +55,9 @@ a:visit{
 .left-container{
     width: 32%;
     height: 700px;
-    float: left;  
+    float: left;
+    transition: width .5 ease-in;
+    overflow: hidden;
 }
 .left-container .top-bar{
     padding-left: 8px;
@@ -79,4 +81,17 @@ a:visit{
     height: 700px;
     float: left;
     background-color: #fff;
+    position: relative;
+}
+.wrapper{
+    position: absolute;
+    left: 500px;
+}
+.active0{
+    transition: left 0s;
+    left:500px;
+}
+.active500{
+    transition:left .4s ease-in;
+    left:0;
 }
